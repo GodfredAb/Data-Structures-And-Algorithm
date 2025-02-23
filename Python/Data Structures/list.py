@@ -1,12 +1,3 @@
-# list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-# # iterate and print each value
-# for i in range(0, len(list) + 1):
-#     print(i)
-
-# # slice
-# print(list[4:-1])
-
 class Players:
 
     def __init__(self):
@@ -16,26 +7,26 @@ class Players:
         self.players.append(value)
 
     def num_of_players(self):
-        num = len(self.players)
-        return num
+        return len(self.players)
+        
         
     def search(self, target):
-        for i in range(0, len(self.players)):
+        for i in range(len(self.players)):
             if self.players[i] == target:
-                return print('Item found at index: ', i)
-            else:
-                print('Item not found')
+                print('Item found at index: ', i)
+                return
+        print('Item not found')
 
 
     def remove(self, target):
-        player
-        for player in range(0, len(self.players)):
-            if self.players[i] == target:
-                break
-            print("Item not present")
-        k = player
-        for k in range(k, len(self.players)):
-            self.players[k] = self.players[k+1]
+        if target in self.players:
+            self.players.remove(target)
+            print(f'Item {target} removed')
+        else: 
+            print('Item not present')
+    
+    def display(self):
+        print(self.players)
 
 
 class Manager:
@@ -49,8 +40,11 @@ class Manager:
     pl.insert(17)
     pl.insert(18)
 
-    print(pl.num_of_players())
+    print(f'Number of players {pl.num_of_players()}')
 
+    pl.display()
     pl.search(17)
-    # pl.remove(15)
+    pl.remove(15)
+    pl.display()
+
 
