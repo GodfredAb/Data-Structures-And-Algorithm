@@ -30,7 +30,8 @@ public class InsertionSort
             long current = a[out];
             in = out;
             while(in > 0 && a[in - 1] > current)
-            {    a[in] = a[in - 1];
+            {   
+                 a[in] = a[in - 1];
                  --in;               
             }
             a[in] = current;

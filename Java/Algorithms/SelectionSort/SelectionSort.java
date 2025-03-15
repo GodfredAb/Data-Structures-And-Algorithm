@@ -34,10 +34,12 @@ public class SelectionSort
         int out, min, in;
 
         for(out = 0; out < nElems - 1; out++)
-        {    min = out;
+        {   
+            min = out;
             for(in = out + 1; in < nElems; in++)
                 if(a[in] < a[min])
-                    swap(in, min);
+                    min = in;
+            swap(out, min);
         }
     }
 }
