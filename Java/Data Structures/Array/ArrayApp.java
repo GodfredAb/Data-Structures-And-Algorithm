@@ -1,50 +1,49 @@
+
 class ArrayApp {
     public static void main(String[] args) {
-        long[] arr= new long[100];
-        int nElems;
-
+        long [] arr = new long[100];
+        int nElems = 0;
         int j;
-        long searchKey;
+        
+        // insert 10 items
+        for(int i = 0; i < arr.length; i++)
+        {
+            arr[i] = i + '0';
+            nElems++;
+        }
 
-        arr[0] = 77;
-        arr[1] = 99;
-        arr[2] = 44;
-        arr[3] = 55;
-        arr[4] = 22;
-        arr[5] = 88;
-        arr[6] = 11;
-        arr[7] = 00;
-        arr[8] = 66;
-        arr[9] = 33;
-        nElems = 10;
+        long searchKey = 150;
 
-        for(j=0; j < nElems; j++)
-            System.out.println(arr[j] + " ");
-        System.out.println("");
-
-
-        searchKey = 66;
         for(j = 0; j < nElems; j++)
             if(arr[j] == searchKey)
                 break;
-        
         if(j == nElems)
             System.out.println("Can't find " + searchKey);
         else
             System.out.println("Found " + searchKey);
 
-        searchKey = 55;
-        for(j = 0; j < nElems; j++)
-            if(arr[j] == searchKey)
-                break;
-        for(int k = j; k < nElems; k++)
-            arr[k] = arr[k+1];
+        System.out.println(arr.length);
         
-        nElems--;
+        long deleteKey = 50;
 
-        for(j=0; j<nElems; j++)
-        // display items
-            System.out.print( arr[j] + " ");
+        for(j = 0; j < nElems; j++)
+            if(arr[j] == deleteKey)
+                break;
+        
+        if(j == nElems)
+            System.out.println("Can't find " + deleteKey);
+        else
+        {
+            for(int k = j; k < nElems - 1; k++)
+                arr[k] = arr[k+1];
+            nElems--;
+        }
+
+        for(j = 0; j < nElems; j++)
+            System.out.println(arr[j] + " ");
         System.out.println("");
+
+
+        System.out.println(arr.length);
     }
 }

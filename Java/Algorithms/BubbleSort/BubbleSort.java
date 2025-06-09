@@ -26,7 +26,7 @@ public class BubbleSort
     {
         int in, out;
 
-        for(out = nElems - 1; out > 1; out--)
+        for(out = nElems - 1; out > 0; out--)
             for(in = 0; in < out; in++)
                 if(a[in] > a[in + 1])
                     swap(in, in + 1);
