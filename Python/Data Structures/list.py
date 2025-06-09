@@ -31,6 +31,7 @@ class Players:
 
 class Manager:
     pl = Players()
+    ml = Players()
 
     pl.insert(12)
     pl.insert(13)
@@ -39,6 +40,7 @@ class Manager:
     pl.insert(16)
     pl.insert(17)
     pl.insert(18)
+    
 
     print(f'Number of players {pl.num_of_players()}')
 
