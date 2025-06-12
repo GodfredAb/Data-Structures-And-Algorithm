@@ -9,7 +9,7 @@ class Players:
     def num_of_players(self):
         return len(self.players)
         
-        
+       
     def search(self, target):
         for i in range(len(self.players)):
             if self.players[i] == target:
